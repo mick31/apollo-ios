@@ -49,6 +49,9 @@ let package = Package(
       ],
       exclude: [
         "Info.plist"
+      ],
+      swiftSettings: [
+        .define("APPLICATION_EXTENSION_API_ONLY=YES"),
       ]),
     .target(
       name: "ApolloAPI",
@@ -56,12 +59,18 @@ let package = Package(
       exclude: [
         "Info.plist",
         "CodegenV1"
+      ],
+      swiftSettings: [
+        .define("APPLICATION_EXTENSION_API_ONLY=YES"),
       ]),
     .target(
       name: "ApolloUtils",
       dependencies: [],
       exclude: [
         "Info.plist"
+      ],
+      swiftSettings: [
+        .define("APPLICATION_EXTENSION_API_ONLY=YES"),
       ]),
     .target(
       name: "ApolloCodegenLib",
